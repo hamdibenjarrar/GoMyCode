@@ -1,0 +1,55 @@
+.loader {
+    border: 8px solid #444;
+    border-top: 8px solid #00d4ff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  button, a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  a:hover, button:hover {
+    opacity: 0.8;
+  }
+  section {
+    padding: 4rem 2rem; /* Ensures consistent padding around each section */
+    margin-bottom: 2rem; /* Adds spacing between sections */
+    position: relative; /* Prevents z-index conflicts */
+  }
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Pushes canvas below other elements */
+  }
+  #hero {
+    position: relative;
+    z-index: 1; /* Ensures hero text and buttons appear above canvas */
+  }
+  footer {
+    padding: 2rem 1rem;
+    background-color: #4e0c0c;
+    color: #b6aeae;
+  }
+  body {
+    margin-bottom: 4rem; /* Adds space at the bottom for the footer */
+  }
+  section {
+    padding: 4rem 2rem; /* Uniform padding for all sections */
+    margin-bottom: 4rem; /* Adds spacing between sections */
+  }
+   

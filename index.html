@@ -5,124 +5,272 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hamdi's Portfolio</title>
   <link href="./src/output.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="./js/script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-gray-800 shadow-md">
-    <div class="container mx-auto flex justify-between items-center p-4">
+<body class="bg-gray-900 text-white">
+  <header class="sticky top-0 z-50 bg-gray-800 p-4">
+    <nav class="container mx-auto flex justify-between">
       <h1 class="text-3xl font-bold text-cyan-400">Hamdi's Portfolio</h1>
-      <nav>
-        <ul class="flex gap-6">
-          <li><a href="#home" class="hover:text-cyan-400">Home</a></li>
-          <li><a href="#projects" class="hover:text-cyan-400">Projects</a></li>
-          <li><a href="#contact" class="hover:text-cyan-400">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-<body class="bg-gray-900 text-white font-sans">
+      <ul class="flex gap-4">
+        <li><a href="#about" class="hover:text-cyan-400">About</a></li>
+        <li><a href="#projects" class="hover:text-cyan-400">Projects</a></li>
+        <li><a href="#contact" class="hover:text-cyan-400">Contact</a></li>
+        <a href="https://github.com/hamdibenjarrar" target="_blank" class="hover:text-cyan-400">GitHub</a>
 
+      </ul>
+    </nav>
+  </header>
 
   <!-- Hero Section -->
-  <section id="home" class="h-screen relative">
+  <section id="hero" class="h-screen relative overflow-hidden">
     <canvas id="heroCanvas"></canvas>
-    <div class="absolute inset-0 flex flex-col justify-center items-center z-10">
-      <h1 class="text-5xl font-bold text-white">Hello, I'm Hamdi</h1>
-      <p class="mt-4 text-xl text-gray-300">Frontend Developer | Backend Enthusiast</p>
-      <a href="#projects" class="mt-8 px-6 py-3 bg-cyan-400 text-gray-900 font-semibold rounded shadow hover:bg-cyan-500 transition">View My Work</a>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
+      <h1 class="text-5xl font-bold text-white">Welcome, I'm Hamdi</h1>
+      <p class="mt-4 text-xl text-gray-300">Creating Interactive & Engaging Experiences</p>
+      <a href="#projects" class="mt-6 px-6 py-3 bg-cyan-400 text-gray-900 font-semibold rounded-lg shadow hover:bg-cyan-500">
+        View My Work
+      </a>
     </div>
   </section>
   
   
   
+  
 
   <!-- Skills Section -->
-  <section id="skills" class="py-16 bg-gray-900">
-    <div class="container mx-auto text-center">
+<section id="skills" class="py-16 bg-gray-900 relative overflow-hidden">
+    <div class="container mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold text-cyan-400">Skills</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
+      <p class="mt-4 text-gray-300 max-w-2xl mx-auto">
+        A showcase of my technical expertise and tools I love working with.
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 mt-10">
+        <!-- Skill Card -->
         <div class="flex flex-col items-center">
-          <i class="fas fa-code text-4xl text-cyan-400"></i>
-          <h3 class="mt-4 text-lg font-semibold">Frontend</h3>
+          <i class="fas fa-code text-6xl text-cyan-400"></i>
+          <h3 class="mt-4 text-lg font-semibold text-white">Frontend</h3>
           <p class="text-sm text-gray-400">JS, Tailwind CSS</p>
         </div>
+        <!-- Skill Card -->
         <div class="flex flex-col items-center">
-          <i class="fas fa-server text-4xl text-cyan-400"></i>
-          <h3 class="mt-4 text-lg font-semibold">Backend</h3>
+          <i class="fas fa-server text-6xl text-cyan-400"></i>
+          <h3 class="mt-4 text-lg font-semibold text-white">Backend</h3>
           <p class="text-sm text-gray-400">Node.js, Express</p>
         </div>
+        <!-- Skill Card -->
         <div class="flex flex-col items-center">
-          <i class="fas fa-paint-brush text-4xl text-cyan-400"></i>
-          <h3 class="mt-4 text-lg font-semibold">Design</h3>
+          <i class="fas fa-paint-brush text-6xl text-cyan-400"></i>
+          <h3 class="mt-4 text-lg font-semibold text-white">Design</h3>
           <p class="text-sm text-gray-400">Figma, Canva</p>
         </div>
+        <!-- Skill Card -->
         <div class="flex flex-col items-center">
-          <i class="fas fa-users text-4xl text-cyan-400"></i>
-          <h3 class="mt-4 text-lg font-semibold">Team Leadership</h3>
+          <i class="fas fa-users text-6xl text-cyan-400"></i>
+          <h3 class="mt-4 text-lg font-semibold text-white">Team Leadership</h3>
           <p class="text-sm text-gray-400">Collaboration & Management</p>
         </div>
       </div>
     </div>
   </section>
   
-<!-- Projects Section -->
-<section id="projects" class="py-16 bg-gray-800">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold text-cyan-400">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-        <div class="bg-gray-900 p-4 rounded-lg shadow-md">
-          <img src="./img/project1.jpg" alt="Project 1" class="rounded-md">
-          <h3 class="mt-4 text-lg font-semibold text-cyan-400">Project Name</h3>
-          <p class="text-sm text-gray-400 mt-2">Short description of the project.</p>
-          <a href="https://github.com/hamdibenjarrar" target="_blank" class="block mt-4 px-4 py-2 bg-cyan-400 text-gray-900 font-semibold rounded hover:bg-cyan-500 transition">View on GitHub</a>
+  <!-- About Section -->
+<section id="about" class="py-16 bg-gray-800 relative overflow-hidden">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-6">
+      <!-- Image Section -->
+      <div class="w-full md:w-1/2">
+        <img
+          src="./img/your-profile.jpg"
+          alt="Hamdi"
+          class="rounded-lg shadow-lg w-full h-auto"
+        />
+      </div>
+      <!-- Text Section -->
+      <div class="w-full md:w-1/2 text-center md:text-left">
+        <h2 class="text-4xl font-bold text-cyan-400">About Me</h2>
+        <p class="mt-4 text-gray-300 leading-relaxed">
+          Hi, I'm Hamdi! A passionate developer transitioning into web
+          development. With a background in tech and a creative mindset, I'm
+          building responsive and interactive web experiences. 
+          <br />
+          My journey is driven by curiosity and a desire to craft seamless
+          digital experiences. Whether it's frontend design or backend logic, I'm
+          excited to bring ideas to life.
+        </p>
+        <a
+          href="./Hamdi-resume.pdf"
+          target="_blank"
+          class="inline-block mt-6 px-6 py-3 bg-cyan-400 text-gray-900 font-semibold rounded-lg shadow hover:bg-cyan-500 transition"
+        >
+          Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+       
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 bg-gray-800 relative">
+            <div class="container mx-auto text-center">
+              <h2 class="text-4xl font-bold text-cyan-400">Projects</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <!-- Project Card 1 -->
+                <div class="bg-gray-900 p-4 rounded-lg shadow-md">
+                  <img src="./img/project1.jpg" alt="Project 1" class="rounded-md">
+                  <h3 class="mt-4 text-lg font-semibold text-cyan-400">Project One</h3>
+                  <p class="text-sm text-gray-400 mt-2">Short description of Project One.</p>
+                  <a href="https://github.com/hamdibenjarrar" target="_blank"
+                     class="block mt-4 px-4 py-2 bg-cyan-400 text-gray-900 font-semibold rounded hover:bg-cyan-500 transition">
+                    View on GitHub
+                  </a>
+                </div>
+                <!-- Project Cards -->
+                <div class="project-card bg-gray-900 p-4 rounded-lg shadow-md"
+                     data-title="Weather App"
+                     data-description="A real-time weather application."
+                     data-image="./img/project1.jpg"
+                     data-link="https://github.com/hamdibenjarrar">
+                  <img src="./img/project1.jpg" alt="Project Image" class="rounded-md">
+                  <h3 class="mt-4 text-lg font-semibold text-cyan-400">Weather App</h3>
+                  <p class="text-sm text-gray-400">Real-time weather updates.</p>
+                </div>
+        <!-- Project Card 1 -->
+        <div class="project-card bg-gray-900 p-4 rounded-lg shadow-md"
+        data-title="Project Name"
+        data-description="Detailed project description"
+        data-image="./img/project1.jpg"
+        data-link="https://github.com/hamdibenjarrar">
+     <img src="./img/project1.jpg" alt="Project Image" class="rounded-md">
+     <h3 class="mt-4 text-lg font-semibold text-cyan-400">Project Name</h3>
+   </div>
+   
+<div id="loading-spinner" class="fixed inset-0 flex items-center justify-center bg-gray-900 z-50">
+    <div class="loader"></div>
+  </div>
+        <!-- Project Card 2 -->
+        <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition">
+          <img src="./img/project2.jpg" alt="Project 2" class="rounded-md mb-4">
+          <h3 class="text-lg font-semibold text-cyan-400">E-Commerce App</h3>
+          <p class="text-sm text-gray-400 mt-2">
+            A dynamic e-commerce platform with product listings, user authentication, and payment gateway integration.
+          </p>
+          <a href="https://github.com/hamdibenjarrar" target="_blank"
+            class="block mt-4 px-4 py-2 bg-cyan-400 text-gray-900 font-semibold rounded hover:bg-cyan-500 transition">
+            View on GitHub
+          </a>
         </div>
-        <!-- Add more project cards -->
+        <!-- Project Card 3 -->
+        <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition">
+          <img src="./img/project3.jpg" alt="Project 3" class="rounded-md mb-4">
+          <h3 class="text-lg font-semibold text-cyan-400">Task Manager</h3>
+          <p class="text-sm text-gray-400 mt-2">
+            A task management tool built with Node.js and Express, allowing users to track and organize tasks effectively.
+          </p>
+          <a href="https://github.com/hamdibenjarrar" target="_blank"
+            class="block mt-4 px-4 py-2 bg-cyan-400 text-gray-900 font-semibold rounded hover:bg-cyan-500 transition">
+            View on GitHub
+          </a>
+        </div>
+        <!-- Project Card 4 -->
+        <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition">
+          <img src="./img/project4.jpg" alt="Project 4" class="rounded-md mb-4">
+          <h3 class="text-lg font-semibold text-cyan-400">Weather App</h3>
+          <p class="text-sm text-gray-400 mt-2">
+            A real-time weather application using API integration to fetch and display weather data for any location.
+          </p>
+          <a href="https://github.com/hamdibenjarrar" target="_blank"
+            class="block mt-4 px-4 py-2 bg-cyan-400 text-gray-900 font-semibold rounded hover:bg-cyan-500 transition">
+            View on GitHub
+          </a>
+        </div>
+        <!-- Project Card 5 -->
+        <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition">
+          <img src="./img/project5.jpg" alt="Project 5" class="rounded-md mb-4">
+          <h3 class="text-lg font-semibold text-cyan-400">Blog Platform</h3>
+          <p class="text-sm text-gray-400 mt-2">
+            A blog platform with user authentication, CRUD operations, and a clean, user-friendly interface.
+          </p>
+          <a href="https://github.com/hamdibenjarrar" target="_blank"
+            class="block mt-4 px-4 py-2 bg-cyan-400 text-gray-900 font-semibold rounded hover:bg-cyan-500 transition">
+            View on GitHub
+          </a>
+        </div>
       </div>
     </div>
   </section>
   
+  <!-- Project Modal Template -->
+<div id="project-modal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
+    <div class="bg-gray-900 text-white p-6 rounded-lg max-w-lg relative">
+      <button id="modal-close" class="absolute top-2 right-2 text-gray-400 hover:text-white">&times;</button>
+      <h3 class="text-2xl font-bold mb-4" id="modal-title">Project Title</h3>
+      <p class="text-gray-300" id="modal-description">Detailed project description here.</p>
+      <img src="" alt="Project Screenshot" id="modal-image" class="mt-4 rounded">
+      <a href="#" target="_blank" id="modal-link" class="mt-4 block text-cyan-400 hover:text-cyan-500">View Project</a>
+    </div>
+  </div>
+  
+  
 <!-- Contact Section -->
-<section id="contact" class="py-16 bg-gray-800">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold text-center text-cyan-400 mb-8">Contact Me</h2>
-      <form class="max-w-lg mx-auto bg-gray-900 p-8 rounded-lg shadow-lg">
-        <div class="mb-4">
+<section id="contact" class="py-16 bg-gray-900 relative">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-cyan-400 text-center">Contact Me</h2>
+      <p class="mt-4 text-gray-300 max-w-2xl mx-auto text-center">
+        Have a question or want to collaborate? Reach out to me through this form!
+      </p>
+      <form class="mt-10 max-w-lg mx-auto bg-gray-800 p-8 rounded-lg shadow-md">
+        <div class="mb-6">
           <label for="name" class="block text-gray-400 mb-2">Your Name</label>
-          <input type="text" id="name" class="w-full p-2 bg-gray-700 text-white rounded-lg" placeholder="Enter your name" required>
+          <input type="text" id="name" name="name" required
+            class="w-full p-3 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-cyan-400 focus:outline-none" 
+            placeholder="Enter your name">
         </div>
-        <div class="mb-4">
+        <div class="mb-6">
           <label for="email" class="block text-gray-400 mb-2">Your Email</label>
-          <input type="email" id="email" class="w-full p-2 bg-gray-700 text-white rounded-lg" placeholder="Enter your email" required>
+          <input type="email" id="email" name="email" required
+            class="w-full p-3 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-cyan-400 focus:outline-none" 
+            placeholder="Enter your email">
         </div>
-        <div class="mb-4">
+        <div class="mb-6">
           <label for="message" class="block text-gray-400 mb-2">Your Message</label>
-          <textarea id="message" rows="4" class="w-full p-2 bg-gray-700 text-white rounded-lg" placeholder="Enter your message" required></textarea>
+          <textarea id="message" name="message" rows="5" required
+            class="w-full p-3 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-cyan-400 focus:outline-none" 
+            placeholder="Enter your message"></textarea>
         </div>
-        <button type="submit" class="w-full bg-cyan-400 text-gray-900 p-2 rounded-lg hover:bg-cyan-500 transition">Send Message</button>
+        <button type="submit"
+          class="w-full p-3 bg-cyan-400 text-gray-900 font-semibold rounded-lg hover:bg-cyan-500 transition">
+          Send Message
+        </button>
       </form>
     </div>
   </section>
   
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-center py-4">
-    <p class="text-sm text-gray-400">&copy; 2024 Hamdi. All Rights Reserved.</p>
-    <div class="flex justify-center mt-4 space-x-4">
-      <a href="https://github.com/hamdibenjarrar" target="_blank">
-        <i class="fab fa-github text-cyan-400 text-2xl"></i>
+  
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 text-center py-6 relative z-10">
+    <p class="text-sm text-gray-400 mb-4">&copy; 2024 Hamdi. All Rights Reserved.</p>
+    <div class="flex justify-center space-x-6">
+      <a href="https://www.facebook.com/your-facebook-profile" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f text-cyan-400 text-2xl hover:text-cyan-500 transition"></i>
       </a>
-      <a href="https://linkedin.com/in/hamdibenjarrar" target="_blank">
-        <i class="fab fa-linkedin text-cyan-400 text-2xl"></i>
+      <a href="https://www.instagram.com/your-instagram-profile" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram text-cyan-400 text-2xl hover:text-cyan-500 transition"></i>
       </a>
-      <a href="https://twitter.com" target="_blank">
-        <i class="fab fa-twitter text-cyan-400 text-2xl"></i>
+      <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in text-cyan-400 text-2xl hover:text-cyan-500 transition"></i>
       </a>
     </div>
   </footer>
   
+  
+  
+  
+  
+  
+
+  <script src="./js/script.js"></script>
+
 </body>
 </html>
